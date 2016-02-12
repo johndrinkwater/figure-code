@@ -1,0 +1,298 @@
+<!DOCTYPE HTML><html lang="en-gb" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#"><head>
+<meta charset="utf-8" />
+<title>jdw ‐ &lt;figure&gt; &lt;code&gt;</title>
+<meta name="viewport" content="width=720, initial-scale=.5" />
+<style type="text/css">/*<![CDATA[*/
+
+/* johndrinkwater.name style */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,a,
+address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
+dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,
+tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,
+main,menu,nav,section,summary,time,mark,audio,video,svg { margin:0;	padding:0 }
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,
+section,summary { display:block }
+audio,canvas,progress,video { display:inline-block }
+
+html { font-size:62.5%; font-family:sans-serif }
+body { font-size:14px }
+
+blockquote,q { quotes:none }
+blockquote:before,blockquote:after,q:before,q:after { content:''; content:none }
+
+html { box-sizing:border-box }
+*,*:before,*:after { box-sizing:inherit }
+
+body { line-height:1; font-family:'Infini', 'Droid Sans','Trebuchet MS',
+lucida, helvetica, sans-serif; font-variant:slashed-zero lining-nums ordinal }
+table { border-collapse:collapse; border-spacing:0 }
+a img { border:0 none }
+
+@font-face { font-family:'Inconsolata'; font-style:normal; font-weight:700; src:local('Inconsolata Bold'), local('Inconsolata-Bold'),
+url(http://fonts.gstatic.com/s/inconsolata/v11/AIed271kqQlcIRSOnQH0yYlIZu-HDpmDIZMigmsroc4.woff2) format('woff2'),
+url(http://fonts.gstatic.com/s/inconsolata/v11/AIed271kqQlcIRSOnQH0yTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff') }
+@font-face { font-family:'Inconsolata'; font-style:normal; font-weight:400; src:local('Inconsolata'),
+url(http://fonts.gstatic.com/s/inconsolata/v11/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2'),
+url(http://fonts.gstatic.com/s/inconsolata/v11/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff) format('woff') }
+@font-face { font-family:'Infini'; font-style:normal; font-weight:700;
+src:local('Infini Bold'), url(./fonts/infini-gras.otf) format('opentype') }
+@font-face { font-family:'Infini'; font-style:normal; font-weight:400;
+src:local('Infini'), url(./fonts/infini-romain.otf) format('opentype') }
+
+mark { background:yellow; color:black }
+::-moz-selection { background:greenyellow; color:black }
+::selection { background:greenyellow; color:black }
+
+h1 { font-size:22px; font-size:2.2rem }
+h2 { font-size:20px; font-size:2rem }
+
+/* == Footer */
+/* XXX class~="class", or */
+body:not(.subtle) main { margin-bottom:4rem; border-bottom:1px solid white }
+body > footer { height:4rem; position:fixed; background:#3d3d3d; color:white; font-weight:bold; bottom:0; width:100% }
+body > footer a { color:white; text-decoration:none }
+body.subtle > footer { position:static }
+body > footer p { margin:0 auto; width:700px; display:block;vertical-align:middle }
+footer .reference { float:right }
+
+/* == Colours */
+html { color:black; background:#cfdde9 }
+
+/* == .clearfix RIP */
+.group:before,.group:after { content:''; display:table }
+.group:after { clear:both }
+.group { zoom:1 }
+
+p { line-height: 150%; margin-bottom: .5em }
+article, section { width: inherit }
+
+pre, code, code q, samp, kbd { font-family: 'Inconsolata', monospace }
+code, samp, kbd { color: #111; background: #fafafa; padding: .15em }
+p > code { white-space: normal; display: inline; line-height: inherit }
+figure pre code code { margin: 0; padding:0; border-left-width: 0; margin-left: 0; line-height: inherit; font-size: inherit; display: inline }
+pre, code { width: inherit }
+pre code, pre.terminal { white-space: pre; tab-size: 2; -moz-tab-size: 2; display: block }
+figure { position: relative;  border-radius: 4px; margin: 1.5rem 0 2rem 0 }
+figure.subtle figcaption, figure.subtle h3 { display:none }
+figure.subtle { border:0 none; border-radius:0; box-shadow: none }
+figcaption { padding: 1rem }
+figure h3 { display:none }
+figure > math { display: block; margin: 0 auto }
+figure pre code, figure pre.terminal { white-space: pre; position: relative; display:block; margin: 0; padding: 1rem .5rem; margin: 0; font-size: 1.2rem; line-height: 1.5rem; overflow-y: auto; max-height: 30rem }
+figure pre + figcaption, figure math + figcaption { position: relative; display: block; background:#eee; padding-right: 7rem; border-top-right-radius: 0; border-top-left-radius: 0 }
+figcaption .source { position: absolute; right:0; top:0; display: block; width: 6rem; height: 100%; vertical-align: middle; text-align: center; border-left: 1px solid white }
+figcaption .source a { display:inline-block; position: absolute; top: 50%; left:50%; margin: -15% 0 0 -40%; height: 50%; width: 80% }
+
+/* General code colours */
+code, code * { font-style: normal }
+code var, code q { color: green }
+code em { color: blue }
+code dfn { color: teal }
+code q { quotes: none }
+/* CSS code colour */
+code[data-mime$='/css'] dfn { color: slategrey }
+code[data-mime$='/css'] i { color: red }
+code[data-mime$='/css'] var { color: purple }
+/* Term code colour */
+pre.terminal { background: #101010; color: #f0f0f0 }
+.terminal kbd { background: inherit; font-size: inherit; line-height: inherit; padding:0; color: white; border-bottom: 1px dotted grey }
+/* XXX remove this testing cruft */
+.green { color:#3a8400 }
+.lime { color:#8adb24 }
+.cyan { color:#05969a }
+.blue { color:#06d6d6 }
+.bold { font-weight:700 }
+
+code/*, code **/ { z-index: 0; position: relative }
+pre code { counter-reset:line-no }
+code u { position: relative; z-index:-1; height:0; width: 100%; box-sizing: content-box }
+
+figure.numbered u { display:inline-block; margin-left:4ch; width:1ch;  }
+figure.numbered u::before { content:" "; content:counter(line-no) " "; counter-increment:line-no; height: 1.5rem; display:inline-block; width:5ch; margin-left:-5ch; margin-right: 1ch; text-align:right; color:grey; border-right: 1px solid grey;  }
+
+/* code block, zebraing */
+figure.zebra u:nth-of-type(even)::before { background: #e6e6e6 }
+figure.zebra u:nth-of-type(even)::after { content:" "; position:absolute; top:0; left:-650px; z-index:-2; background: #f0f0f0; border-left:650px solid #f0f0f0; width:100%; box-shadow: 650px 0 0 #f0f0f0 }
+figure.numbered u:nth-of-type(even)::after { left:-5ch }
+figure:not(.numbered) u { float:left; * because * }
+
+article { position: relative; margin-top: 1em }
+article, footer { clear: both }
+main { width: 96% }
+main, header, footer, nav.pagination { 720px; margin: 0 auto }
+section { max-width: 900px; width: initial }
+
+main { clear: both }
+abbr { text-decoration: green dotted underline; text-decoration: rgba(0, 128, 0, 0.25) underline wavy; transition: text-decoration-color .5s ease }
+a abbr { border: none; text-decoration: none }
+abbr:hover { cursor: pointer; text-decoration-color: green }
+
+/*]]>*/</style>
+
+</head><body class="subtle">
+<main id="top">
+ <article>
+	<h2>&lt;figure&gt; &lt;code&gt;</h2>
+  <section>
+<p>Picking up some work I did at the end of 2014, a better method for formatting code on my site, using <abbr>HTML</abbr> tags. While it is much cleaner than other outputs, it still has the burden of HTML entities with <code>&amp;lt;</code> and <code>&amp;gt;</code>, so looks unpleasant to read in the source code.</p>
+<p>[Link to unfinished article, playing with escapement and characters in &lt;code&gt;]</p>
+<p>However, the current state of this is far enough that it is time to start sharing ‐ ’cause otherwise I will never get anything done.</p>
+<p>Plenty of sites now use javascript code highlighting, increasing page download and processing time, and unsurprisingly increases memory usage. To me, this is a little absurd, as it means each visitor is computing the same workload when it would be much better if they just had to decompress it. Considering they already do this step for the majority of <abbr>HTTP</abbr> transactions anyway, we get it for free.</p>
+<p>Then the focus must be on <em>better</em> code highlighting, as that is the other problem with preprocessed code. Masses of redundant tags, classes, barbaric nesting etc.</p>
+<p><abbr>HTML</abbr> spec has a reasonable selection of short tags used for marking up content, and so we use these! The selection is less important, and these are not final, but being able to use <code>i, em, var, dfn, b</code> for the bulk of syntax is a storage saving.</p>
+<p>Have also used HTML5’s data- attribute support to tag the mime type for the relevant code block.</p>
+<!-- Make the size/compute part of the article more of an article, and way pros/cons of this approach with /actual/ examples -->
+<!-- excuse the blob of CSS above, this is not meant to be a copy/pastable example, just a WIP of my process to make something ideal for me. That may include duplicated selectors, less performant CSS, and probably some redudancy that isn’t even applied. -->
+<hr>
+
+<p>A block of <abbr>HTML</abbr> code.</p>
+
+<figure>
+<h3 id="figure-1">Figure 1</h3>
+<pre><code data-mime="text/html"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+</figure>
+
+<p>… and the HTML used to create it<abbr title="No inception jokes, ffs">*<abbr></p>
+
+&lt;u&gt;&lt;/u&gt;
+
+<figure>
+<h3 id="figure-2">Figure 2</h3>
+<pre><code data-mime="text/html">&lt;figure&gt;
+&lt;h3 id="figure-1"&gt;Figure 1&lt;/h3&gt;
+&lt;pre&gt;&lt;code data-mime="text/html"&gt;&lt;u&gt;&lt;/u&gt;&amp;lt;&lt;b&gt;!DOCTYPE HTML&lt;/b&gt;&amp;gt;
+&lt;u&gt;&lt;/u&gt;&amp;lt;&lt;i&gt;html&lt;/i&gt; &lt;dfn&gt;lang&lt;/dfn&gt;=&lt;var&gt;"en-gb"&lt;/var&gt; &lt;dfn&gt;xmlns&lt;/dfn&gt;=&lt;var&gt;"http://www.w3.org/1999/xhtml"&lt;/var&gt; &lt;dfn&gt;prefix&lt;/dfn&gt;=&lt;var&gt;"og: http://ogp.me/ns#"&lt;/var&gt;&amp;gt;
+&lt;u&gt;&lt;/u&gt;&amp;lt;&lt;i&gt;meta&lt;/i&gt; &lt;dfn&gt;charset&lt;/dfn&gt;=&lt;var&gt;"utf-8"&lt;/var&gt; /&amp;gt;
+&lt;u&gt;&lt;/u&gt;&amp;lt;&lt;i&gt;title&lt;/i&gt;&amp;gt;jdw ‐ ‘example code markup for HTML’&amp;lt;/&lt;i&gt;title&lt;/i&gt;&amp;gt;
+&lt;u&gt;&lt;/u&gt;&amp;lt;&lt;i&gt;style&lt;/i&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</code></pre>
+<figcaption>Example of how our example works. Have left this unmarked in the source, as it would be rather cluttered.</figcaption>
+</figure>
+
+<p>A block of <abbr>HTML</abbr> code with numbered lines.</p>
+
+<p>We enable this with <code>&lt;figure class="<mark>numbered</mark>"&gt;</code> </p>
+
+<figure class="subtle numbered">
+<h3 id="figure-3">Figure 3</h3>
+<pre><code data-mime="text/html"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+<figcaption>Example showing our numbered example with a subtle showing - so subtle that our figcaption is not shown!</figcaption>
+</figure>
+
+<p>A block of <abbr>HTML</abbr> code with that awful Zebra highlighting.</p>
+
+<p>Things that break this… <a href="#figure-6">a later example</a>.</p>
+
+<p>We enable this with <code>&lt;figure class="<mark>zebra</mark> numbered"&gt;</code> </p>
+
+<figure class="zebra numbered">
+<h3 id="figure-4">Figure 4</h3>
+<pre><code data-mime="text/html"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+<figcaption>Example showing custom line numbering</figure>
+
+<p>More <abbr>HTML</abbr> code with that awful Zebra highlighting, and line numbers. Obviously this is enabled with <code>&lt;figure class="<mark>zebra</mark>"&gt;</code></p>
+
+<figure class="zebra">
+<h3 id="figure-5">Figure 5</h3>
+<pre><code data-mime="text/html"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+<figcaption>More example output, isn’t it awesome?</figcaption>
+</figure>
+
+<p>Code block with nested code highlighting our mixed styles. The purpose of this is to tag &lt;script&gt; and &lt;style&gt; contents with subtly different options for colour - either different shades or none. It appears that for now, this obviously breaks zebraing due to parenting issues :( It could be fixed up with js, if we so chose.</p>
+
+<figure>
+<h3 id="figure-6">Figure 6</h3>
+<pre><code data-mime="text/html"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;<code data-mime="text/css">
+<u></u><i>a</i> { <em>color</em>: <var>blue</var>; }</code>
+<u></u>&lt;/<i>style</i>&gt;
+</code></pre>
+<figcaption>More example output, isn’t it awesome?</figcaption>
+</figure>
+
+<p>Code with later-than-1 source line numbering</p>
+
+<p>We enable this with <code data-mime="text/html">&lt;<i>code</i> <mark>style="counter-reset: line-no 863"</mark>&gt;</code>, because CSS is still ungreat. It would be nice to set <code data-mime="text/html"><dfn>data-line</dfn>=<var>"863"</var></code> and move it into CSS with <code data-mime="text/css"><i>counter-reset:</i><var>line-no</var> <dfn>attr</dfn>(<var>data-line</var>)</code> to get this minimal inline style out of the doc. Maybe once <code data-mime="text/css"><dfn>var</dfn>()</code> support is great all over.</p>
+
+<p><small>If you didn’t notice yet, that entire paragraph was tagged identically to the code blocks for the specific languages that they contain.</small></p>
+
+<figure class="zebra numbered">
+<h3 id="figure-7">Figure 7</h3>
+<pre><code data-mime="text/html" style="counter-reset: line-no 863"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+<figcaption>Example showing custom line numbering</figcaption>
+</figure>
+
+<p>Code with a description, yet told to be subtle. This should make it appear like a regular code block.
+We enable this with <code>&lt;figure class="<mark>subtle</mark>"&gt;</code> </p>
+
+<figure class="subtle numbered">
+<h3 id="figure-8">Figure 8</h3>
+<pre><code data-mime="text/html" style="counter-reset: line-no 222"><u></u>&lt;<b>!DOCTYPE HTML</b>&gt;
+<u></u>&lt;<i>html</i> <dfn>lang</dfn>=<var>"en-gb"</var> <dfn>xmlns</dfn>=<var>"http://www.w3.org/1999/xhtml"</var> <dfn>prefix</dfn>=<var>"og: http://ogp.me/ns#"</var>&gt;
+<u></u>&lt;<i>meta</i> <dfn>charset</dfn>=<var>"utf-8"</var> /&gt;
+<u></u>&lt;<i>title</i>&gt;jdw ‐ ‘example code markup for HTML’&lt;/<i>title</i>&gt;
+<u></u>&lt;<i>style</i>&gt;
+</code></pre>
+<figcaption>Example showing custom line numbering with a subtle presentation</figcaption>
+</figure>
+
+<p>Terminal output without numbered lines</p>
+
+<figure>
+<h3 id="figure-9">Figure 9</h3>
+<!-- This is part of an unfinished article on `script` output, styling, and control codes -->
+<pre class="terminal"><span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯ <kbd>la</kbd>
+total 13k
+drwxrwxr-x 7 john 4.1k 2015-08-17 14:30 <span class="blue bold">.git</span>/
+-rw-rw-r-- 1 john    0 2015-08-17 14:58 log
+-rw-rw-r-- 1 john    0 2015-08-17 14:58 log.time
+-rw-rw-r-- 1 john  532 2015-08-17 14:15 README
+-rw-rw-r-- 1 john    0 2015-08-17 14:53 typescript.output
+-rwxrwxr-x 1 john 2.0k 2015-08-17 14:52 <span class="lime bold">usertypedscript.py</span>*
+<span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯ <kbd>la usertypedscript.py</kbd>
+-rwxrwxr-x 1 john 2.0k 2015-08-17 14:52 <span class="lime bold">usertypedscript.py</span>*
+<span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯ <kbd>la log</kbd>
+-rw-rw-r-- 1 john 0 2015-08-17 14:58 log
+<span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯ la log
+log       log.time
+<span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯ la log<kbd>.time </kbd>
+-rw-rw-r-- 1 john 0 2015-08-17 14:58 log.time
+<span class="green">john</span>@joran ~/code/usertypedscript <span class="cyan">±:master #%</span>❯
+</pre>
+<figcaption>Simple terminal output</figcaption>
+</figure>
+
+   </section>
+ </article>
+</main>
+</body></html>
